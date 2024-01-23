@@ -3,23 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hockey's website using Tailwind & DaisyUI</title>
-
-    <!-- tailwind and daisyui cdn -->
+    <title>Tailwind Website with DaisyUi</title>
+    
+    <!-- tailwind and DaisyUi cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header>
 
+    <!-- manrope google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/534f4a2c6b.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind custom color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'box-black': '#131318',
+                'sm-text' : '#ffffff99',
+                'orange-btn' : '#FF4240'
+              }
+            }
+          }
+        }
+      </script>
+
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-manrope">
+    <header class="container mx-auto">
+      <!-- nav section  -->
+        
+          <nav>
+            <div class="navbar bg-base-100">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                  </div>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a class="text-orange-btn font-medium">Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <a class="btn btn-ghost text-xl lg:text-4xl">Hockey <span class="text-orange-btn">’</span>s</a>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                  <li><a class="text-orange-btn font-medium">Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end gap-6">
+                <i class="fas fa-search text-2xl"></i>
+                <a class="btn px-10 bg-orange-btn justify-center text-center rounded-lg font-bold text-xl text-white">Get Ticket</a>
+              </div>
+            </div>
+        </nav>
+
+        <!-- banner section  -->
+        <div class="carousel rounded-2xl lg:h-[550px]  ">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="Images/hokey (1).jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide3" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="Images/hokey (2).jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+        </div>
+
+           <!-- black box container  -->
+      <div class="relative">
+        <!-- next review -->
+        <div class="absolute lg:right-44 lg:-top-52 p-6 mt-4 lg:mt-0 lg:p-10 rounded-2xl bg-box-black text-white">
+          <h4 class="text-2xl font-bold mt-5">Meet all the heroes from the field</h4>
+          <p class="font-medium text-sm-text">Dit amet consectetur. Condimentum dignissim adipiscing <br> aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+        </div>
     </header>
 
-    <main>
-
+    <main class="container mx-auto">
+ 
     </main>
 
+    <!-- footer section  -->
+
+    <footer class="px-4 lg:px-48 py-10 bg-red-100 text-base-content">
+      <div class="flex justify-between my-24">
+        <img src="images/cup.png" alt="">
+        <p>
+          <span>Ready to get strated?</span>
+          <button class="btn text-white bg-gradient-to-r from-gradient-start to-gradient-end">Get Started</button>
+        </p>
+      </div>
+     <div class="footer">
+      <nav>
+        <header class="footer-title">Services</header> 
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Company</header> 
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Legal</header> 
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav> 
+      <form>
+        <header class="footer-title">Newsletter</header> 
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text">Enter your email address</span>
+          </label> 
+          <div class="join">
+            <input type="text" placeholder="Email address" class="py-4 bg-transparent border-b-2 border-black outline-none" /> 
+            <button class="btn text-white rounded-full bg-gradient-to-r from-gradient-start to-gradient-end"><i class="fas fa-angle-right"></i></button>
+          </div>
+        </fieldset>
+      </form>
+     </div>
+
+      <aside class="mt-10 text-center">
+        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+      </aside>
+    </footer>
+    
+</body>
+</html>
+
     <!-- footer section -->
-    <footer class="footer p-10 bg-[#131318]">
+    <!-- <footer class="footer p-10 bg-[#131318]">
         <aside class="font-bold text-lg text-base-100">
           <p>Get In Touch</p>
           <p class="text-[#9ca3af] text-sm font-medium">Dit amet consectetur. Condimentum  adipiscing <br> aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
@@ -49,6 +198,4 @@
           <a class="link link-hover text-[#9ca3af]">Hockey's for Kids</a>
           <a class="link link-hover text-[#9ca3af]">Hockey's for Adults</a>
         </nav>
-      </footer>
-</body>
-</html>
+      </footer> -->
